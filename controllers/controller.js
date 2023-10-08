@@ -1,5 +1,9 @@
 const controller = async(data)=>{
-    return data;
+    return {
+        status:true,
+        response:"OK",
+        date: data
+    };
 }
 
 module.exports = {metodo:controller, eco:controller};

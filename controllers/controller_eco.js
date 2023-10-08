@@ -1,11 +1,13 @@
-const echoWS = require('../server_ws/ws_backend_eco'); 
+require("dotenv").config();
+const echoWS = require('../server_ws/ws_backend_eco');
+const config = require('./settings');
 const WebSocket = require('ws');
 
-const ws = new WebSocket('ws://127.0.0.1:8086', {
-  origin: 'http://127.0.0.1/'
+const ws = new WebSocket(`ws://${config.base_url}:${config.base_url}`, {
+  origin: `http://${config.base_url}`
 });
 
-//OBJEO QUE SE COMUNICA CON LOS EVENOS DEL SERVIDOR SOCKET
+//OBJECT COMMUNICATING WITH SOCKET SERVER EVENTS
 const socket = echoWS(ws);
 console.log(socket);
 
@@ -15,5 +17,5 @@ socket.on('connection', function(){
 
 socket.on('event', function(data){
     console.log(data);
-    socket.emit('response', `Escucha de el evento echo ws: ${data}`)
+    socket.emit('response', `Listen event echo ws: ${data}`)
 })

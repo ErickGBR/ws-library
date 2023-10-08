@@ -4,23 +4,30 @@
   "description": "Simple libreria para ws nativos",
   "main": "index.js",
   "dependencies": {
-    "chart.js": "^3.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "events": "^3.3.0",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "helmet": "^7.0.0",
     "uuidv1": "^1.6.14",
     "ws": "^7.5.3"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ErickGBR/bot-whatsapp-server.git"
+    "url": "git+https://github.com/ErickGBR/ws-library.git"
   },
-  "author": "ErickBurgos",
+  "author": "Erick Burgos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ErickGBR/bot-whatsapp-server/issues"
+    "url": "https://github.com/ErickGBR/ws-library/issues"
   },
-  "homepage": "https://github.com/ErickGBR/bot-whatsapp-server#readme"
+  "homepage": "https://github.com/ErickGBR/ws-library#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
